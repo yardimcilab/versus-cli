@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "versus-cli"
-version = "0.1.0"
+version = "0.2.1"
 description = "Run A vs. B analyses, storing analysis input, command and result in YAMLized dataframe. Part of Wistan infrastructure."
 authors = ["Ben Skubi <bskubi@gmail.com>"]
 readme = "README.md"

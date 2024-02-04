@@ -79,7 +79,7 @@ def filter(input_filters, pairs):
 @click.option('--sut-command', default = None, help='Override command for strict upper triangle')
 @click.option('--md-command', default = None, help='Override command for strict lower triangle')
 @click.option('--slt-command', default = None, help='Override command for main diagonal')
-@click.option('--caption_index', nargs=2, default = [0, 1], help='Indices of input to use as row and column captions (index 0-1 are raw input strings; index 2+ are filters)')
+@click.option('--caption-index', nargs=2, default = [0, 1], help='Indices of input to use as row and column captions (index 0-1 are raw input strings; index 2+ are filters)')
 @click.option('--dryrun', is_flag=True, default=False, help='Do not actually run the commands')
 @click.option('--noyaml', is_flag=True, default=False, help='Echo the pandas DataFrame without dumping to YAML')
 def versus(input_filters, command, sut_command, md_command, slt_command, caption_index, dryrun, noyaml):
