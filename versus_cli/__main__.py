@@ -82,7 +82,10 @@ def filter(input_filters, pairs):
 @click.option('--caption-index', nargs=2, default = [0, 1], help='Indices of input to use as row and column captions (index 0-1 are raw input strings; index 2+ are filters)')
 @click.option('--dryrun', is_flag=True, default=False, help='Do not actually run the commands')
 @click.option('--noyaml', is_flag=True, default=False, help='Echo the pandas DataFrame without dumping to YAML')
-def versus(input_filters, command, sut_command, md_command, slt_command, caption_index, dryrun, noyaml):
+@click.option("--echo-args", is_flag=True)
+def versus(input_filters, command, sut_command, md_command, slt_command, caption_index, dryrun, noyaml, echo_args):
+    if echo_args:
+        print('\n'.join([str(x) for x in [input_filters, command, sut_command, md_command, slt_command, caption_index, dryrun, noyaml, echo_args]]))
     pairs = get_pairs()
     filtered_input = filter(input_filters, pairs)
     commands = get_commands(command, sut_command, md_command, slt_command)
